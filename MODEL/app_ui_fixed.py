@@ -191,8 +191,9 @@ div[data-testid="stVerticalBlockBorderWrapper"] > div { padding:7px 10px !import
 # ─────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_assets():
-    df = pd.read_pickle("df_full.pkl")
-    models = joblib.load("models.joblib")
+    base = Path(__file__).parent
+    df = pd.read_pickle(base / "df_full.pkl")
+    models = joblib.load(base / "models.joblib")
     from short_signal_pipeline import FEATURE_COLS
     return df, models, FEATURE_COLS
 
