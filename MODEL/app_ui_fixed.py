@@ -169,8 +169,8 @@ button[kind="primary"] {
 .sr { display:grid; grid-template-columns:1fr auto; gap:6px; align-items:center; padding:5px 0; border-bottom:1px solid rgba(148,163,184,.14); font-size:13px; }
 .sk { color:#475569; font-weight:350; }
 .sv { font-size:17px; font-weight:550; }
-.tr { display:grid; grid-template-columns:100px 1fr; gap:6px; padding:5px 0; border-bottom:1px solid rgba(148,163,184,.14); font-size:13px; }
-.tk { color:#4f46e5; font-weight:500; }
+.tr { display:grid; grid-template-columns:auto 1fr; gap:10px; padding:5px 0; border-bottom:1px solid rgba(148,163,184,.14); font-size:13px; }
+.tk { color:#4f46e5; font-weight:500; white-space:nowrap; }
 .td-desc { color:#64748b; }
 .dsm { margin-top:7px; color:#94a3b8; font-size:13px; line-height:1.5; }
 
@@ -617,8 +617,8 @@ with content_col:
     b1, b2, b3 = st.columns([1.15, 1.0, 1.35], gap="medium")
 
     cond_list = [
-        ("공매도 비중이 평균 대비 70%ile 이상입니다.",                    pressure_pct  >= 0.70),
-        ("공매도 잔고율이 평균 대비 70%ile 이상입니다.",                  balance_pct   >= 0.70),
+        ("공매도 비중이 평균 대비 70% 이상입니다.",                    pressure_pct  >= 0.70),
+        ("공매도 잔고율이 평균 대비 70% 이상입니다.",                  balance_pct   >= 0.70),
         (f"5일 내 반등 가능성이 {EASE_TH*100:.0f}% 이상 추정됩니다.",    any(v >= EASE_TH for v in easing.values())),
         ("하락 압력 확률이 40% 이상입니다.",                              pressure_prob >= PRESSURE_TH),
     ]
