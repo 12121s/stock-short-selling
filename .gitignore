@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 가상환경 (절대 커밋 금지)
+.venv/
+
+# Claude Code 설정
+.claude/
+
+# 학습 로그
+catboost_info/
+
+# 압축 파일
+MODEL.zip

@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 불필요한 앱 버전 (구버전)
+app.py
+app_refined.py
+app_refined_fixed.py
+stremalit.ipynb
+
+# 체크포인트 (models.joblib 중복)
+models_checkpoint.joblib
