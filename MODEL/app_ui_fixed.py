@@ -323,7 +323,7 @@ def selected_rows_from_event(event) -> list[int]:
 # Session state
 # ─────────────────────────────────────────────────────────────
 if "selected_isu_cd" not in st.session_state:
-    st.session_state["selected_isu_cd"] = str(df["ISU_CD"].dropna().iloc[0])
+    st.session_state["selected_isu_cd"] = "005930"
 
 available_dates = sorted(df["date"].dropna().unique())
 
@@ -363,7 +363,7 @@ with content_col:
     with hc3:
         date_sel = st.selectbox(
             "기준일", available_dates,
-            index=next((i for i, d in enumerate(available_dates) if pd.Timestamp(d).strftime("%Y-%m-%d") == "2026-06-11"), len(available_dates) - 1),
+            index=next((i for i, d in enumerate(available_dates) if pd.Timestamp(d).strftime("%Y-%m-%d") == "2026-06-16"), len(available_dates) - 1),
             format_func=lambda d: pd.Timestamp(d).strftime("%Y-%m-%d"),
             label_visibility="collapsed",
         )
